@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <title>Bulma Tiles Example</title>
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+      <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+      <script>
+function selectDataSet(id) {
+   console.log('in function');
+   console.log(id);
+}
+      </script>
+   </head>
+   <body>
+      <section class = "section">
+         <div class = "container">
+            <span class = "title">
+               Tiles
+            </span>
+            <br>
+            <br>
+            
+            <a id="energy" href=# onclick="selectDataSet(this.id); return false">
+            <div class = "tile is-ancestor">
+               <div class = "tile is-vertical is-8">
+                  <div class = "tile">
+                     <div class = "tile is-parent is-vertical" style="border-radius: 5%; background-color: pink">
+                        <!-- <article class = "tile is-child notification is-primary"> -->
+                           <p class = "title">Energy Domain</p>
+                           <div class = "content">Hello World!!!</div>
+                           <br>
+                        <!-- </article> -->
+                     </div>
+                  </a>
+                  
+                    <!--  <div class = "tile is-parent">
+                        <article class = "tile is-child notification is-info">
+                           <p class = "title">Middle Tile</p>
+                           <p class = "subtitle">With an image</p>
+                           <figure class = "image is-2by1">
+                              <img src = "https://www.tutorialspoint.com/bootstrap/images/64.jpg">
+                           </figure>
+                        </article>
+                     </div>
+                  </div> -->
+                  <div class = "tile is-parent">
+                     <article class = "tile is-child notification is-danger">
+                        <p class = "title">E-Commerce</p>
+                        <div class = "content">
+                           Hello World!!!
+                        </div>
+                        <br>
+                     </article>
+                  </div>
+               </div>
+               
+               <div class = "tile is-parent">
+                  <article class = "tile is-child notification is-success">
+                     <div class = "content">
+                        <p class = "title">Cyber Group</p>
+                        <div class = "content">
+                           Hello World!!!
+                        </div>
+                        <br>
+                     </div>
+                  </article>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+      
+   </body>
+</html>

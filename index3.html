@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$('input[type="button"]').click(function(){
+    if($(this).hasClass('no')){
+        $(this).addClass('turnRed');
+        $(this).parent().find('.yes').removeClass('turnGreen');
+    }else{
+        $(this).addClass('turnGreen');
+        $(this).parent().find('.no').removeClass('turnRed');
+    }
+});
+</script>
+</head>
+
+<body>
+
+<a href=#><div class="card1">
+  <input type="button"  class="yes" value="YES"/> 
+  <input type="button" class="no" value="NO"/>
+</div></a>
+
+<div class="card2">
+  <input type="button"  class="yes" value="YES"/> 
+  <input type="button" class="no" value="NO"/>
+</div>
+
+<div class="card3">
+  <input type="button"  class="yes" value="YES"/> 
+  <input type="button" class="no" value="NO"/>
+</div>
+
+<div class="card4">
+  <input type="button"  class="yes" value="YES"/> 
+  <input type="button" class="no" value="NO"/>
+</div>
+
+</body>
+
+</html>
