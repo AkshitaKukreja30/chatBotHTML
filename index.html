@@ -11,17 +11,22 @@
   <script type="text/javascript" src="index.js"></script>
 <script>
 function selectDataSet(id) {
-   id = id + "Div";
-   console.log('in function');
+   divId = id + "Div";
    console.log(id);
-   document.getElementById(id).style.backgroundColor="lightgreen";
+   document.getElementById(divId).style.backgroundColor="lightgreen";
    var categoryIds = ["energyDiv", "commerceDiv", "cgDiv"];
-   categoryIds = categoryIds.filter(item => item !== id)
+   categoryIds = categoryIds.filter(item => item !== divId)
    console.log(categoryIds);
     for (var i = 0; i < 2; i++) {
         document.getElementById(categoryIds[i]).style.backgroundColor="black";
     }
-   }
+    var xmlHttp = new XMLHttpRequest();
+    apiUrl = 'https://akshitakukreja.pythonanywhere.com/getDataSetName?category='+ id;
+    console.log(apiUrl);
+    xmlHttp.open( "GET", apiUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    console.log(xmlHttp.responseText);
+}
       </script>
   <style>body{background-color: cornsilk};</style>
 </head>
